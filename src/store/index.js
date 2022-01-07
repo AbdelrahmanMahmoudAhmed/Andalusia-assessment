@@ -33,7 +33,7 @@ export default store(function (/* { ssrContext } */) {
             },
             {
               product: "product-one-1-d",
-              onHand: 65,
+              onHand: 0,
             },
             {
               product: "product-one-1-e",
@@ -45,7 +45,7 @@ export default store(function (/* { ssrContext } */) {
             },
             {
               product: "product-one-1-g",
-              onHand: 66,
+              onHand: 0,
             },
             {
               product: "product-one-1-h",
@@ -79,7 +79,7 @@ export default store(function (/* { ssrContext } */) {
             },
             {
               product: "product-one-2-d",
-              onHand: 65,
+              onHand: 0,
             },
             {
               product: "product-one-2-e",
@@ -91,7 +91,7 @@ export default store(function (/* { ssrContext } */) {
             },
             {
               product: "product-one-2-g",
-              onHand: 66,
+              onHand: 0,
             },
             {
               product: "product-one-2-h",
@@ -125,7 +125,7 @@ export default store(function (/* { ssrContext } */) {
             },
             {
               product: "product-one-3-d",
-              onHand: 65,
+              onHand: 0,
             },
             {
               product: "product-one-3-e",
@@ -137,7 +137,7 @@ export default store(function (/* { ssrContext } */) {
             },
             {
               product: "product-one-3-g",
-              onHand: 66,
+              onHand: 0,
             },
             {
               product: "product-one-3-h",
@@ -173,7 +173,7 @@ export default store(function (/* { ssrContext } */) {
             },
             {
               product: "product-two-1-d",
-              onHand: 65,
+              onHand: 0,
             },
             {
               product: "product-two-1-e",
@@ -185,7 +185,7 @@ export default store(function (/* { ssrContext } */) {
             },
             {
               product: "product-two-1-g",
-              onHand: 66,
+              onHand: 0,
             },
             {
               product: "product-two-1-h",
@@ -219,7 +219,7 @@ export default store(function (/* { ssrContext } */) {
             },
             {
               product: "product-two-2-d",
-              onHand: 65,
+              onHand: 0,
             },
             {
               product: "product-two-2-e",
@@ -231,7 +231,7 @@ export default store(function (/* { ssrContext } */) {
             },
             {
               product: "product-two-2-g",
-              onHand: 66,
+              onHand: 0,
             },
             {
               product: "product-two-2-h",
@@ -265,7 +265,7 @@ export default store(function (/* { ssrContext } */) {
             },
             {
               product: "product-two-3-d",
-              onHand: 65,
+              onHand: 0,
             },
             {
               product: "product-two-3-e",
@@ -277,7 +277,7 @@ export default store(function (/* { ssrContext } */) {
             },
             {
               product: "product-two-3-g",
-              onHand: 66,
+              onHand: 0,
             },
             {
               product: "product-two-3-h",
@@ -313,7 +313,7 @@ export default store(function (/* { ssrContext } */) {
             },
             {
               product: "product-three-1-d",
-              onHand: 65,
+              onHand: 0,
             },
             {
               product: "product-three-1-e",
@@ -325,7 +325,7 @@ export default store(function (/* { ssrContext } */) {
             },
             {
               product: "product-three-1-g",
-              onHand: 66,
+              onHand: 0,
             },
             {
               product: "product-three-1-h",
@@ -359,7 +359,7 @@ export default store(function (/* { ssrContext } */) {
             },
             {
               product: "product-three-2-d",
-              onHand: 65,
+              onHand: 0,
             },
             {
               product: "product-three-2-e",
@@ -371,7 +371,7 @@ export default store(function (/* { ssrContext } */) {
             },
             {
               product: "product-three-2-g",
-              onHand: 66,
+              onHand: 0,
             },
             {
               product: "product-three-2-h",
@@ -405,7 +405,7 @@ export default store(function (/* { ssrContext } */) {
             },
             {
               product: "product-three-3-d",
-              onHand: 65,
+              onHand: 0,
             },
             {
               product: "product-three-3-e",
@@ -417,7 +417,7 @@ export default store(function (/* { ssrContext } */) {
             },
             {
               product: "product-three-3-g",
-              onHand: 66,
+              onHand: 0,
             },
             {
               product: "product-three-3-h",
