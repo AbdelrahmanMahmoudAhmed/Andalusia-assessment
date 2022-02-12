@@ -38,7 +38,7 @@
             value="check"
             @click="checkZeroFun"
           />
-          <label for="check">show zero balance</label>
+          <label for="check">hide zero balance</label>
         </div>
       </div>
       <div class="product-seconde-row">
