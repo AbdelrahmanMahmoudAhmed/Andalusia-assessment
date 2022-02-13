@@ -1,6 +1,8 @@
 <template>
-  <Header />
-  <Footer />
+  <div id="q-app">
+    <Header />
+    <Footer />
+  </div>
 </template>
 <script>
 import { defineComponent } from "vue";
