@@ -38,7 +38,7 @@
             value="check"
             @click="checkZeroFun"
           />
-          <label for="check">show zero balance</label>
+          <label for="check">hide zero balance</label>
         </div>
       </div>
       <div class="product-seconde-row">
@@ -52,6 +52,7 @@
                 id="all"
                 value="allProducts"
                 @click="setRadioValue"
+                checked
               />
               <label for="all">all products</label>
             </div>
@@ -318,6 +319,7 @@ export default {
       .check-box {
         display: flex;
         align-items: center;
+
         input {
           margin-right: 10px;
         }
@@ -327,6 +329,21 @@ export default {
           color: #484887d1;
           font-weight: 500;
         }
+        @media (max-width: 992px) {
+          justify-content: center;
+        }
+      }
+      @media (max-width: 992px) {
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+        .check-box {
+          grid-column: 1/3;
+          margin: 7px 0;
+        }
+      }
+      @media (max-width: 576px) {
+        grid-template-columns: 1fr;
+        text-align: center;
       }
     }
     .product-seconde-row {
@@ -346,6 +363,7 @@ export default {
           display: flex;
           justify-content: space-between;
           margin-right: 60px;
+
           .radio-sec {
             display: flex;
             align-items: center;
@@ -359,6 +377,11 @@ export default {
             input {
               margin-right: 7px;
             }
+          }
+          @media (max-width: 992px) {
+            justify-content: space-around;
+            margin-right: 0;
+            margin-bottom: 15px;
           }
         }
       }
@@ -387,6 +410,14 @@ export default {
           height: 29px;
           cursor: pointer;
         }
+        @media (max-width: 992px) {
+          justify-content: center;
+          margin-bottom: 40px;
+        }
+      }
+      @media (max-width: 992px) {
+        grid-template-columns: 1fr;
+        text-align: center;
       }
     }
   }

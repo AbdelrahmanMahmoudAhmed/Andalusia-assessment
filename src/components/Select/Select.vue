@@ -48,6 +48,8 @@ export default {
 <style lang="scss">
 .q-pa-md {
   padding: 16px 0;
+  // display: inline-block;
+  margin: auto;
 }
 .q-field__control.relative-position.row.no-wrap {
   padding: 0 0 0 15px;

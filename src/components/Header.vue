@@ -126,6 +126,9 @@ header {
       margin-top: 5px;
       margin-right: auto;
       margin-left: 22px;
+      @media (max-width: 576px) {
+        display: none;
+      }
       input {
         width: 350px;
         height: 25px;
