@@ -344,6 +344,10 @@ export default {
       @media (max-width: 576px) {
         grid-template-columns: 1fr;
         text-align: center;
+        .check-box {
+          grid-column: 1;
+          margin: 7px 0;
+        }
       }
     }
     .product-seconde-row {
