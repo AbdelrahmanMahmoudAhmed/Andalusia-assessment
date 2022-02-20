@@ -32,16 +32,20 @@
       </div>
       <div class="main-nav">
         <q-icon size="1.5em" name="home" />
-
-        <router-link to="/" class="route__link" active-class="active">
+        <router-link
+          to="/"
+          class="route__link"
+          active-class="active"
+          ref="home"
+        >
           <q-icon size="1.5em" name="chevron_right" />Home</router-link
         >
-
         <router-link
           to="/Product"
           id="product-link"
           class="route__link"
           active-class="active"
+          ref="product"
         >
           <q-icon
             size="1.5em"
@@ -66,20 +70,28 @@
 </template>
 
 <script>
-import { ref, watch, onMounted } from "vue";
-import { useRouter, useRoute } from "vue-router";
+import { ref, watch } from "vue";
+import { useRoute } from "vue-router";
 export default {
   setup() {
     const route = useRoute();
+    console.log(route.path);
     const toggleIndicator = ref(false);
     const homeSelector = ref(null);
     const productSelector = ref(null);
+    const home = ref(null);
+    const product = ref(null);
 
+    watch(
+      () => route.path,
+      () => {
+        if (route.path == "/Product") {
+          console.log(home.value);
+        }
+      }
+    );
     const toggleMenu = () => {
       const toggleButton = document.querySelector(".sub-nav");
-      console.log(document.querySelectorAll(".nav-links")[1]);
-      console.log(toggleButton, toggleButton.value);
-
       if (toggleIndicator.value) {
         toggleButton.style.display = "none";
         toggleIndicator.value = false;
@@ -93,6 +105,8 @@ export default {
       toggleMenu,
       homeSelector,
       productSelector,
+      home,
+      product,
     };
   },
 };

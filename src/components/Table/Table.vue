@@ -238,18 +238,11 @@ export default {
 
     watch(
       () => props.finalData,
-      (first, second) => {
-        console.log(
-          "Watch props.selected function called with args:",
-          first,
-          second
-        );
-      }
+      (first, second) => {}
     );
     watch(
       () => props.finalData,
       (first, second) => {
-        console.log("Watch props.selected function called with args:", first);
         originalRows.value = first;
       }
     );

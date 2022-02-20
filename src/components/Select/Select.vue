@@ -25,7 +25,7 @@ export default {
     });
 
     const theLable = ref(props.theLable);
-    const options = ref([props.data]);
+    const options = ref([]);
     const t = onUpdated(() => {
       if (props.data) {
         options.value = props.data;
@@ -33,7 +33,6 @@ export default {
 
       if (!props.resetTypeSelect && props.theLable == "types") {
         model.value = " ";
-        console.log(props.resetTypeSelect);
       }
     });
 

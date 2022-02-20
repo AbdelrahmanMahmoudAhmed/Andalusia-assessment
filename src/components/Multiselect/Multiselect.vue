@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { ref, onUpdated } from "vue";
+import { ref, onUpdated, watch } from "vue";
 
 export default {
   props: ["products", "resetTypeMultiSelect", "resetTypeSelect"],
@@ -28,6 +28,8 @@ export default {
 
     let p = onUpdated(() => {
       emit("getProductsSelected", modelMultiple.value);
+    });
+    let updatedTwo = onUpdated(() => {
       if (props.products) {
         options.value = props.products;
         if (firstInArray.value != props.products[0]) {
@@ -35,12 +37,16 @@ export default {
           modelMultiple.value = [];
         }
       }
-
-      if (!props.resetTypeSelect) {
-        modelMultiple.value = [];
-        options.value = [];
-      }
     });
+    watch(
+      () => props.resetTypeSelect,
+      () => {
+        if (!props.resetTypeSelect) {
+          modelMultiple.value = [];
+          options.value = [];
+        }
+      }
+    );
 
     return {
       modelSingle,

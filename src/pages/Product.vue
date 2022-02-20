@@ -83,13 +83,6 @@
 
         <div class="search-button">
           <button @click="getAllData">Search</button>
-          <!-- <q-btn
-            :ripple="{ center: true }"
-            color="secondary"
-            label="Search"
-            no-caps
-           
-          /> -->
         </div>
       </div>
       <Table :finalData="finalData" :realUpdate="realUpdate" />
@@ -402,7 +395,6 @@ export default {
       }
       .search-button {
         display: flex;
-        align-items: end;
         justify-content: right;
         button {
           border: 1px solid #eee;
