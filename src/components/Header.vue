@@ -30,14 +30,9 @@
       <div class="bars">
         <q-icon name="apps" @click="toggleMenu" />
       </div>
-      <div class="main-nav">
+      <div class="main-nav" ref="nav">
         <q-icon size="1.5em" name="home" />
-        <router-link
-          to="/"
-          class="route__link"
-          active-class="active"
-          ref="home"
-        >
+        <router-link to="/" class="route__link" active-class="active">
           <q-icon size="1.5em" name="chevron_right" />Home</router-link
         >
         <router-link
@@ -45,13 +40,8 @@
           id="product-link"
           class="route__link"
           active-class="active"
-          ref="product"
         >
-          <q-icon
-            size="1.5em"
-            name="chevron_right"
-            ref="productSelector"
-          />Product</router-link
+          <q-icon size="1.5em" name="chevron_right" />Product</router-link
         >
       </div>
     </nav>
@@ -75,18 +65,17 @@ import { useRoute } from "vue-router";
 export default {
   setup() {
     const route = useRoute();
-    console.log(route.path);
     const toggleIndicator = ref(false);
     const homeSelector = ref(null);
-    const productSelector = ref(null);
-    const home = ref(null);
-    const product = ref(null);
+    const nav = ref(null);
 
     watch(
       () => route.path,
       () => {
-        if (route.path == "/Product") {
-          console.log(home.value);
+        if (route.path == "/") {
+          nav.value.children[2].style.display = "none";
+        } else if (route.path == "/Product") {
+          nav.value.children[2].style.display = "inline-block";
         }
       }
     );
@@ -104,9 +93,7 @@ export default {
     return {
       toggleMenu,
       homeSelector,
-      productSelector,
-      home,
-      product,
+      nav,
     };
   },
 };

@@ -66,7 +66,7 @@ a.router-link-active.router-link-exact-active.active.nav-links + * {
   background: #f5f7f9;
 }
 
-a.active.router-link-exact-active + * {
-  display: none;
-}
+// a.active.router-link-exact-active + * {
+//   display: none;
+// }
 </style>
