@@ -38,7 +38,7 @@
         <router-link
           to="/Product"
           id="product-link"
-          class="route__link"
+          class="route__link product-a"
           active-class="active"
         >
           <q-icon size="1.5em" name="chevron_right" />Product</router-link
@@ -60,7 +60,7 @@
 </template>
 
 <script>
-import { ref, watch } from "vue";
+import { ref, watch, onMounted } from "vue";
 import { useRoute } from "vue-router";
 export default {
   setup() {
@@ -72,9 +72,9 @@ export default {
     watch(
       () => route.path,
       () => {
-        if (route.path == "/") {
+        if (route.path === "/") {
           nav.value.children[2].style.display = "none";
-        } else if (route.path == "/Product") {
+        } else if (route.path === "/Product") {
           nav.value.children[2].style.display = "inline-block";
         }
       }
@@ -206,6 +206,9 @@ nav {
     }
     a.active {
       color: #fff;
+    }
+    a.product-a {
+      display: none;
     }
   }
 }
